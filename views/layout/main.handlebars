@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -6,26 +5,40 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Tech Blog</title>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">		
-        <link rel="stylesheet" href="../public/css/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../public/css/style.css" />
 	</head>
 	<body>
 		<header>
-            <div class="top-container">
-			<nav class="navigation-bar">
-                    <li><a>Home</a></li>
-                    <!-- If logged in, show dashboard and logout -->
-                    <li><a>Dashboard</a></li>
-                    <li><a>Logout</a></li>
-                    <!-- Else, show login -->
-                    <li><a>Login</a></li>
-			</nav>
-            <h1 class="title">The Tech Blog</h1>
-            </div>
+			<div class="top-container">
+				<nav class="navigation-bar">
+					<li><a>Home</a></li>
+					<!-- If logged in, show dashboard and logout -->
+					{{#if logged_in}}
+						<li><a>Dashboard</a></li>
+						<li><a>Logout</a></li>
+					{{else}}
+						<!-- Else, show login -->
+						<li><a>Login</a></li>
+					{{/if}}
+				</nav>
+				<h1 class="title">The Tech Blog</h1>
+			</div>
 		</header>
-        <main class="main-container">
-            <!-- Insert main body here -->
-            {{{ body }}}
-        </main>
+		<main class="main-container">
+			<!-- Insert main body here -->
+			<!-- Render the sub layout -->
+			{{{body}}}
+		</main>
+		<footer>
+
+		</footer>
+		<!-- Render script for logged in users only -->
+		{{#if logged_in}}
+			<script src="../../public/js/logout.js"></script>
+		{{/if}}
 	</body>
 </html>
