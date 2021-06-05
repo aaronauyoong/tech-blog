@@ -6,66 +6,88 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Tech Blog</title>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">		
-        <link rel="stylesheet" href="../public/css/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../public/css/style.css" />
 	</head>
 	<body>
 		<header>
-            <div class="top-container">
-			<nav class="navigation-bar">
-                    <li><a>Home</a></li>
-                    <!-- If logged in, show dashboard and logout -->
-                    <li><a>Dashboard</a></li>
-                    <li><a>Logout</a></li>
-                    <!-- Else, show login -->
-                    <li><a>Login</a></li>
-			</nav>
-            <h1 class="title">The Tech Blog</h1>
-            </div>
+			<div class="top-container">
+				<nav class="navigation-bar">
+					<li><a>Home</a></li>
+					<!-- If logged in, show dashboard and logout -->
+					<li><a>Dashboard</a></li>
+					<li><a>Logout</a></li>
+					<!-- Else, show login -->
+					<li><a>Login</a></li>
+				</nav>
+				<h1 class="title">The Tech Blog</h1>
+			</div>
 		</header>
-        <main class="main-container">
-            <!-- Insert main body here -->
-            <div class="row">
-                <div class="col-md-6">
-                  <h2>Login</h2>
-              
-                  <form class="form login-form">
-                    <div class="form-group">
-                      <label for="email-login">email:</label>
-                      <input class="form-input" type="text" id="email-login" />
-                    </div>
-                    <div class="form-group">
-                      <label for="password-login">password:</label>
-                      <input class="form-input" type="password" id="password-login" />
-                    </div>
-                    <div class="form-group">
-                      <button class="btn btn-primary" type="submit">login</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="col-md-6">
-                  <h2>Signup</h2>
-              
-                  <form class="form signup-form">
-                    <div class="form-group">
-                      <label for="name-signup">name:</label>
-                      <input class="form-input" type="text" id="name-signup" />
-                    </div>
-                    <div class="form-group">
-                      <label for="email-signup">email:</label>
-                      <input class="form-input" type="text" id="email-signup" />
-                    </div>
-                    <div class="form-group">
-                      <label for="password-signup">password:</label>
-                      <input class="form-input" type="password" id="password-signup" />
-                    </div>
-                    <div class="form-group">
-                      <button class="btn btn-primary" type="submit">signup</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+		<main class="main-container">
+			<!-- Insert main body here -->
 
-        </main>
+            <!-- below is login page -->
+			<div class="card">
+				<div class="card-header">
+					<div class="card-title">Login</div>
+				</div>
+				<div class="card-body">
+					<form class="login-form">
+						<div>
+							<label for="username-login" class="form-label">Username</label>
+							<input type="text" class="form-input" id="username-login" />
+						</div>
+						<div>
+							<label for="password-login" class="form-label">Password</label>
+							<input type="password" class="form-input" id="password-login" />
+						</div>
+						<div>
+							<button type="submit" class="btn">Login</button>
+						</div>
+						<a href="../public/js/signup.js">Sign up instead</a>
+					</form>
+				</div>
+			</div>
+
+			<script src="../public/js/login.js"></script>
+
+            <!-- below is signup page -->
+
+            <div class="card">
+				<div class="card-header">
+					<div class="card-title">Sign Up</div>
+				</div>
+				<div class="card-body">
+					<form class="signup-form">
+                        <div>
+							<label for="email-signup" class="form-label">Email</label>
+							<input type="text" class="form-input" id="email-signup" />
+						</div>
+						<div>
+							<label for="username-signup" class="form-label">Username</label>
+							<input type="text" class="form-input" id="username-signup" />
+						</div>
+						<div>
+							<label for="password-signup" class="form-label">Password</label>
+							<input type="password" class="form-input" id="password-signup" />
+						</div>
+						<div>
+							<button type="submit" class="btn">Sign Up</button>
+						</div>
+						<a href="../public/js/login.js">Login instead</a>
+					</form>
+				</div>
+			</div>
+
+		</main>
 	</body>
 </html>
