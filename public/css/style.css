@@ -1,51 +1,52 @@
 :root {
-    /* insert colours here */
-    --solidbrown: rgb(36, 9, 9);
-    --lightgreen: rgb(178, 194, 178);
-    --grey: #6f6866;
+	/* insert colours here */
+	--solidbrown: rgb(36, 9, 9);
+	--lightgreen: rgb(178, 194, 178);
+	--grey: #6f6866;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-    line-height: 1.5;
-    font-size: 16px;
-    background-color: var(--lightgreen);
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	line-height: 1.5;
+	font-size: 16px;
+	background-color: var(--lightgreen);
 }
 
 h1 {
-    font-weight: 700;
-    margin: 0;
-    color: var(--dark);
-    line-height: 1.25;
+	font-weight: 700;
+	margin: 0;
+	color: var(--dark);
+	line-height: 1.25;
 }
 
 li {
-    list-style-type: none;
+	list-style-type: none;
 }
 
-a { 
-    cursor: pointer;
+a {
+	cursor: pointer;
+    text-decoration: none;
 }
 
-/* a :hover {
+a :hover {
     text-decoration: underline;
     text-decoration-color: aliceblue;
-} */
+}
 
 header {
-    background-color: var(--solidbrown);
+	background-color: var(--solidbrown);
 }
 
 .top-container {
-    padding: 10px;
+	padding: 10px;
 }
 
 .navigation-bar {
-    padding: 0;
+	padding: 0;
 	margin-top: 0;
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: left;
@@ -54,26 +55,96 @@ header {
 }
 
 .navigation-bar li {
-    text-decoration: none;
-    color: var(--lightgreen);
-    padding: 20px 60px;
-    padding-left: 60px;
+	text-decoration: none;
+	color: var(--lightgreen);
+	padding: 20px 60px;
+	padding-left: 60px;
 	padding-right: 60px;
-    font-weight: 300;
-    /* border: beige;
+	font-weight: 300;
+	/* border: beige;
     border-style: solid;
     border-width: thin;
     border-radius: 10px; */
 }
 
 .title {
-    padding-left: 60px;
+	padding-left: 60px;
 	padding-right: 60px;
-    margin-left: 60px;
-    margin-bottom: 20px;
-    display: inline-block;
+	margin-left: 60px;
+	margin-bottom: 20px;
+	display: inline-block;
+	border-radius: 10px;
+	background-color: var(--lightgreen);
+	box-shadow: 6px 5px var(--grey);
+	font-weight: bolder;
+}
+
+.main-container {
+    margin: 20px auto;
+    width: 90%;
+}
+
+.card {
+	display: flex;
+	background-color: var(--lightgreen);
     border-radius: 10px;
-    background-color: var(--lightgreen);
-    box-shadow: 6px 5px var(--grey);
-    font-weight: bolder;
+    border: 3px solid var(--solidbrown);
+}
+
+.card-header {
+	background-color: var(--solidbrown);
+    padding: 10px 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.card-title {
+	color: var(--lightgreen);
+	font-weight: bolder;
+	font-size: 26px;
+}
+
+.card a {
+    color: var(--solidbrown);
+}
+
+.form-label {
+    display: flex;
+    width: auto;
+}
+
+.form-input {
+    width: 100%;
+}
+
+
+
+.card-body {
+	padding: 15px;
+}
+
+
+.meta {
+	font-size: 14px;
+}
+
+.content {
+	margin-bottom: 20px;
+}
+
+.btn {
+    font-size: 16px;
+    text-decoration:none;
+    padding: 10px 5px;
+    width: 100%;
+    display: block;
+    margin: 15px 0;
+    border-radius: 10px;
+    color: var(--lightgreen);
+    border: none;
+    outline: none;
+    background-color: var(--grey);
+    box-shadow: 3px 3px var(--solidbrown);
+    transform: translate(-1px, -1px);
 }
