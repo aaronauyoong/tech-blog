@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node seeds/seed.js"
+    "seed": "node seeds/seed.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -28,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/aaronauyoong/tech-blog/issues"
   },
-  "homepage": "https://github.com/aaronauyoong/tech-blog#readme"
+  "homepage": "https://github.com/aaronauyoong/tech-blog#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
