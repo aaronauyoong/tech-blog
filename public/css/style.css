@@ -112,30 +112,16 @@ header {
 	font-size: 12px;
 }
 
-.signup-link a {
+.signup-link, .login-link {
     color: var(--solidbrown);
 	text-decoration: none;
 }
 
-.login-link a {
-    color: var(--solidbrown);
+.signup-link:hover, .login-link:hover {
 	text-decoration: none;
 }
 
-.signup-link :hover {
-	text-decoration: none;
-}
-
-.signup-link a :visited {
-	text-decoration: none;    
-	color: var(--solidbrown);
-}
-
-.login-link :hover {
-	text-decoration: none;
-}
-
-.login-link a :visited {
+.signup-link:visited, .login-link:visited {
 	text-decoration: none;    
 	color: var(--solidbrown);
 }
