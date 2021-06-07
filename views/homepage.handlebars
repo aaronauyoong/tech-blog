@@ -1,8 +1,29 @@
 <!-- Loop over each object in the posts array -->
-<!-- {{#each posts as |post| }} -->
+{{#each posts as |post|}}
 
-<div>
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title"><h3><a> {{ post.title }} </a></h3></div>
+			<div class="card-datetime"><p>Posted by Aaron on 06.06.2021</p></div>
+		</div>
+		<div class="card-body">
+			<p>This is a sample post.</p>
+		</div>
+	</div>
 
-</div>
+	<div>
+		<div class="card">
+			<div class="card-header">
+				<h3>
+					<a class="card-title" href="/blog/{{blog.id}}">{{blog.title}}</a>
+				</h3>
+				<p>Posted by {{user.username}} on {{format_date date_created}}</p>
+			</div>
 
-<!-- {{/each}} -->
+			<p class="card-body">
+				{{blog.content}}
+			</p>
+		</div>
+	</div>
+
+{{/each}}

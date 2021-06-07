@@ -49,6 +49,19 @@ router.post("/login", async (req, res) => {
 	}
 });
 
+router.post("/signup", async (req, res) => {
+	try {
+		const userData = req.session.save(() => {
+			req.session.user_id = userData.id;
+			req.session.logged_in = true;
+
+			res.json({ userData, message: "Your have successfully signed up!" });
+		});
+	} catch (err) {
+		res.status(400).json(err);
+	}
+});
+
 router.post("/logout", (req, res) => {
 	if (req.session.logged_in) {
 		req.session.destroy(() => {

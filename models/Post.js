@@ -20,9 +20,14 @@ Post.init (
         post_content: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [4, 5000]
-            }
+            // validate: {
+            //     len: [4, 5000]
+            // }
+        },
+        date_created: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW
         },
         user_id: {
             type: DataTypes.INTEGER,

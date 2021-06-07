@@ -3,12 +3,14 @@
 		"id": 1,
         "title": "ThisIsATest1",
 		"post_content": "TestingContent1",
+		"date_created": "06.06.2021",
         "user_id": 123
 	},
 	{
 		"id": 2,
         "title": "ThisIsAnotherTest",
 		"post_content": "TestingContent2",
+		"date_created": "06.06.2021",
         "user_id": 456
 	}
 ]

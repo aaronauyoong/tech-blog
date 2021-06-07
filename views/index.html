@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Tech Blog</title>
+		<!-- <link rel="stylesheet" href="../public/css/jass.css"/> -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
@@ -35,7 +36,7 @@
 		<main class="main-container">
 			<!-- Insert main body here -->
 
-            <!-- below is login page -->
+			<!-- below is login page -->
 			<div class="card">
 				<div class="card-header">
 					<div class="card-title">Login</div>
@@ -53,22 +54,24 @@
 						<div>
 							<button type="submit" class="btn">Login</button>
 						</div>
-						<a href="../public/js/signup.js">Sign up instead</a>
+						<a class="signup-link" href="../public/js/signup.js"
+							>Sign up instead</a
+						>
 					</form>
 				</div>
 			</div>
 
 			<script src="../public/js/login.js"></script>
 
-            <!-- below is signup page -->
+			<!-- below is signup page -->
 
-            <div class="card">
+			<div class="card">
 				<div class="card-header">
 					<div class="card-title">Sign Up</div>
 				</div>
 				<div class="card-body">
 					<form class="signup-form">
-                        <div>
+						<div>
 							<label for="email-signup" class="form-label">Email</label>
 							<input type="text" class="form-input" id="email-signup" />
 						</div>
@@ -83,10 +86,23 @@
 						<div>
 							<button type="submit" class="btn">Sign Up</button>
 						</div>
-						<a href="../public/js/login.js">Login instead</a>
+						<a class="login-link" href="../public/js/login.js">Login instead</a>
 					</form>
 				</div>
 			</div>
+
+			<!-- Below is a sample post -->
+
+			<div class="card">
+				<div class="card-header">
+					<div class="card-title"><h3><a>This is a sample post title</a></h3></div>
+					<div class="card-datetime"><p>Posted by Aaron on 06.06.2021</p></div>
+				</div>
+				<div class="card-body">
+					<p>This is a sample post.</p>
+				</div>
+			</div>
+
 
 		</main>
 	</body>

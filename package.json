@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node seeds/seed.js",
+    "seed": "node /db/seeds/seed.js",
     "dev": "nodemon server.js"
   },
   "dependencies": {

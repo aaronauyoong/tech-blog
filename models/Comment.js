@@ -15,9 +15,18 @@ Comment.init(
         comment_content: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [500]
-            }
+        },
+        date_created: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
         },
         post_id: {
             type: DataTypes.INTEGER,

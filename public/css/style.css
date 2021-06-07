@@ -28,11 +28,16 @@ li {
 a {
 	cursor: pointer;
     text-decoration: none;
+	color: var(--lightgreen);
 }
 
 a :hover {
-    text-decoration: underline;
-    text-decoration-color: aliceblue;
+    text-decoration: none;
+}
+
+a :visited {
+	color: var(--lightgreen);
+	text-decoration: none;
 }
 
 header {
@@ -61,10 +66,6 @@ header {
 	padding-left: 60px;
 	padding-right: 60px;
 	font-weight: 300;
-	/* border: beige;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 10px; */
 }
 
 .title {
@@ -81,11 +82,10 @@ header {
 
 .main-container {
     margin: 20px auto;
-    width: 90%;
+	width: 80%;
 }
 
 .card {
-	display: flex;
 	background-color: var(--lightgreen);
     border-radius: 10px;
     border: 3px solid var(--solidbrown);
@@ -95,18 +95,49 @@ header {
 	background-color: var(--solidbrown);
     padding: 10px 15px;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+    justify-content: space-between;
+    text-transform: capitalize;
+    align-items: center;
 }
 
 .card-title {
 	color: var(--lightgreen);
-	font-weight: bolder;
-	font-size: 26px;
+	font-weight: 900;
+	font-size: 28px;
 }
 
-.card a {
+.card-datetime {
+	color: var(--lightgreen);
+	font-style: italic;
+	font-size: 12px;
+}
+
+.signup-link a {
     color: var(--solidbrown);
+	text-decoration: none;
+}
+
+.login-link a {
+    color: var(--solidbrown);
+	text-decoration: none;
+}
+
+.signup-link :hover {
+	text-decoration: none;
+}
+
+.signup-link a :visited {
+	text-decoration: none;    
+	color: var(--solidbrown);
+}
+
+.login-link :hover {
+	text-decoration: none;
+}
+
+.login-link a :visited {
+	text-decoration: none;    
+	color: var(--solidbrown);
 }
 
 .form-label {
@@ -118,10 +149,9 @@ header {
     width: 100%;
 }
 
-
-
 .card-body {
 	padding: 15px;
+	justify-content: center;
 }
 
 
@@ -148,3 +178,4 @@ header {
     box-shadow: 3px 3px var(--solidbrown);
     transform: translate(-1px, -1px);
 }
+
