@@ -1,6 +1,7 @@
 <!-- Loop over each object in the posts array -->
 {{#each posts as |post|}}
 
+{{!-- Sample post --}}
 	<div class="card">
 		<div class="card-header">
 			<div class="card-title"><h3><a> {{ post.title }} </a></h3></div>
@@ -11,17 +12,18 @@
 		</div>
 	</div>
 
+{{!-- Handlebar test --}}
 	<div>
 		<div class="card">
 			<div class="card-header">
 				<h3>
-					<a class="card-title" href="/blog/{{blog.id}}">{{blog.title}}</a>
+					<a class="card-title" href="/blog/{{post.id}}">{{post.title}}</a>
 				</h3>
 				<p>Posted by {{user.username}} on {{format_date date_created}}</p>
 			</div>
 
 			<p class="card-body">
-				{{blog.content}}
+				{{post.content}}
 			</p>
 		</div>
 	</div>
