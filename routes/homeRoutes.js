@@ -1,7 +1,5 @@
 const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
-
-// const homepageController = require("../controllers/homepageController");
 const withAuth = require("../utils/auth");
 
 // get all posts for homepage dashboard
@@ -27,8 +25,6 @@ router.get("/", async (req, res) => {
 });
 
 // Get specific posts by id
-// router.get("/post/:id", homepageController.getPostById);
-
 router.get("/post/:id", withAuth, async (req, res) => {
 	try {
 		const postData = await Post.findByPk(req.params.id, {
