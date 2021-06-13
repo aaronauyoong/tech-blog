@@ -4,6 +4,7 @@ const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./routes");
+const auth = require("./utils/auth")
 const dateHelper = require("./utils/dateHelper");
 
 const sequelize = require("./config/connection");
