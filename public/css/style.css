@@ -100,6 +100,10 @@ label {
 	width: 80%;
 }
 
+.hide {
+	display: none;
+}
+
 .card {
 	background-color: var(--lightgreen);
     border-radius: 10px;
