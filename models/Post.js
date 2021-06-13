@@ -20,9 +20,6 @@ Post.init (
         post_content: {
             type: DataTypes.STRING,
             allowNull: false,
-            // validate: {
-            //     len: [4, 5000]
-            // }
         },
         date_created: {
             type: DataTypes.DATE,
