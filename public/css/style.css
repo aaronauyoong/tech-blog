@@ -212,7 +212,13 @@ label {
 
 .new-post {
 	text-align: center;
+}
 
+.create-post-btn {
+	display: flex;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
 }
 
 .new-comment {
