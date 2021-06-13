@@ -2,8 +2,11 @@
 	/* insert colours here */
 	--solidbrown: rgb(36, 9, 9);
 	--gentlebrown: rgb(117, 103, 103);
+	--brownishpink: rgb(92, 69, 73);
 	--lightgreen: rgb(178, 194, 178);
+	--stormgrey: rgb(41, 40, 40);
 	--grey: #6f6866;
+	--purewhite: white;
 }
 
 body {
@@ -116,7 +119,6 @@ label {
     padding: 10px 15px;
 	display: flex;
     justify-content: space-between;
-    text-transform: capitalize;
     align-items: center;
 }
 
@@ -190,11 +192,18 @@ label {
 
 .comments {
 	border-top: 0.1px solid var(--solidbrown);
+	border-bottom: 0.1px solid var(--solidbrown);
 	padding: 20px;
 	background-color: aliceblue;
 	color: black;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	/* border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px; */
+}
+
+.comment-card {
+	background-color: var(--lightgreen);
+    border-radius: 10px;
+	margin: 10px;
 }
 
 .comment-user {
@@ -238,3 +247,35 @@ label {
 	background-color: var(--gentlebrown);
 	color: white;
 }
+
+.post-overview {
+	border: 5px solid var(--stormgrey);
+	border-radius: 10px;
+}
+.post-overview-card {
+	display: flex;
+	background-color: var(--brownishpink);
+	color: var(--purewhite);
+	padding: 5px;
+	align-content: center;
+    justify-content: space-between;
+    align-items: center;
+	border-radius: 5px;
+}
+
+.post-title a {
+	color: var(--purewhite);
+	font-weight: 500;
+	font-size: 24px;
+}
+
+.post-datetime {
+	color: var(--purewhite);
+	font-style: italic;
+	font-size: 12px;
+}
+
+.post-expanded {
+	display: flex;
+}
+

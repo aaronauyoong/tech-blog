@@ -1,8 +1,60 @@
 {{!-- This is where users can see their dashboard of a list of their posts, and add a new post --}}
+
+{{!-- Showing post overview (they have to click to expand the post to edit or delete) --}}
+{{#each posts as |post|}}
+<section class="posts-overview">
+	<div class="post-overview">
+		<div class="post-overview-card">
+			<div class="post-title"><h3><a href="/post/{{id}}">
+						{{title}}
+					</a></h3></div>
+			<div class="post-datetime"><p>Posted by: {{username}} at {{format_date date_created}}</p></div>
+		</div>
+	</div>
+</section>
+{{/each}}
+
+{{!-- Showing entire post including content --}}
+{{#each posts as |post| }}
+<section class="posts-overview">
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title"><h3><a href="/post/{{id}}"> {{title}}</a></h3></div>
+			<div class="card-datetime"><p>Posted by: {{username}} at {{format_date date_created}}</p></div>
+		</div>
+		<div class="card-body">
+			<p>{{post_content}}</p>
+		</div>
+	</div>
+</section>
+{{/each}}
+
 <section class="user-dashboard">
+	{{#each posts as |post|}}
+		<section class="posts-overview">
+			<div class="post-overview">
+				<div class="post-overview-card">
+					<div class="post-title">
+						<h3>
+							<a href="/post/{{id}}">{{title}}</a>
+						</h3>
+					</div>
+					<div class="post-datetime">
+						<p>Posted by: {{username}} at {{format_date date_created}}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	{{/each}}
+
+	{{!--  --}}
+
     {{#each posts as |post|}}
     {{> posts post}}
     {{/each}}
+
+	{{!--  --}}
+	
     <div id="create-post-btn">
         <button type="submit" class="new-post-btn btn"><i class="fas fa-plus"></i> CREATE NEW POST</button>
     </div>

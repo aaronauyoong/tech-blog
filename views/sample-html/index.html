@@ -101,6 +101,16 @@
 				</div>
 			</section>
 
+			<!-- Below is sample post overview -->
+			<section class="posts-overview">
+				<div class="post-overview">
+					<div class="post-overview-card">
+						<div class="post-title"><h3><a href="/post/{{id}}"> Post title </a></h3></div>
+						<div class="post-datetime"><p>Posted by test on 06/06/2021</p></div>
+					</div>
+				</div>
+			</section>
+
 			<!-- Below is a sample post -->
 			<section class="posts">
 				<div class="card">
@@ -114,7 +124,6 @@
 					</div>
 					<div class="card-body">
 						<p>This is a sample post content.</p>
-						<button class="comment-btn">Add Comment</button>
 					</div>
 					<section class="comments">
 						<div class="comments-card">
@@ -122,6 +131,25 @@
 						</div>
 						<div class="comment-user">
 							<p>Aaron, 13/06/2021</p>
+						</div>
+					</section>
+					<section class="add-comment">
+						<div class="comment-card">
+							<div class="card-body">
+								<form id="new-comment-form">
+									<label for="new-comment-content" class="form-label"></label>
+									<textarea
+										rows="2"
+										cols="120"
+										placeholder="Add your comment here."
+										aria-setsize="fixed"
+									></textarea>
+								</form>
+								<button type="submit" class="new-comment-btn btn"><i
+										class="fas fa-plus"
+									></i>
+									ADD COMMENT</button>
+							</div>
 						</div>
 					</section>
 				</div>
@@ -157,6 +185,35 @@
 						</form>
 						<button type="submit" class="new-post-btn btn"><i class="fas fa-plus"></i> ADD POST</button>
 					</div>
+			</section>
+
+			<!-- Below is sample HTML for editing posts -->
+			<section id="edit-post-card" class="edit-post">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Edit Post</div>
+					</div>
+					<div class="card-body">
+						<form id="new-post-form">
+							<label for="new-post-title" class="form-label">TITLE</label>
+							<textarea
+								rows="2"
+								placeholder="{{title}}"
+								aria-setsize="fixed"
+							></textarea>
+							<label for="new-post-content" class="form-label">POST CONTENT</label>
+							<textarea
+								rows="10"
+								placeholder="{{post_content}}"
+								aria-setsize="fixed"
+							></textarea>
+						</form>
+						<button id="update-post-btn" type="submit" class="new-post-btn btn">
+							<i class="fas fa-pen"></i> UPDATE POST </button>
+						<button id="delete-post-btn" type="submit" class="new-post-btn btn">
+							<i class="fas fa-trash"></i> DELETE POST</button>
+					</div>
+				</div>
 			</section>
 			
 		</main>

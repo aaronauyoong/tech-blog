@@ -4,8 +4,7 @@ const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./routes");
-const auth = require("./utils/auth")
-const dateHelper = require("./utils/dateHelper");
+const dateHelper = require("./utils/helper");
 
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
@@ -30,7 +29,7 @@ const sess = {
 app.use(session(sess));
 
 // Set Handlebars as the default template engine.
-app.engine("handlebars", hbs.engine)
+app.engine("handlebars", hbs.engine);
 
 app.set("view engine", "handlebars");
 

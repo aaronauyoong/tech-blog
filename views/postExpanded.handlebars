@@ -1,0 +1,47 @@
+{{! This is what the user will see when they click on the title of post (i.e. brings to a page with expanded post) }}
+<section class="posts">
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title">
+				<h3 class="card-title">{{title}}</h3>
+			</div>
+			<div class="card-datetime">
+				<p>{{username date_created}}</p>
+			</div>
+		</div>
+		<div class="card-body">
+			<p>{{post_content}}</p>
+		</div>
+		<section class="comments">
+			<div class="comments-card">
+				<p>{{comment_content}}</p>
+			</div>
+			<div class="comment-user">
+				<p>{{username date_created}}</p>
+			</div>
+		</section>
+		<section class="add-comment">
+			<div class="comment-card">
+				<div class="card-body">
+					<form id="new-comment-form">
+						<label for="new-comment-content" class="form-label"></label>
+						<textarea
+							rows="2"
+							cols="120"
+							placeholder="Add your comment here."
+							aria-setsize="fixed"
+						></textarea>
+					</form>
+					<button type="submit" class="new-comment-btn btn"><i
+							class="fas fa-plus"
+						></i>
+						ADD COMMENT</button>
+				</div>
+			</div>
+		</section>
+	</div>
+</section>
+
+{{#if logged_in}}
+<script src="/js/addComment.js"></script>
+{{/if}}
