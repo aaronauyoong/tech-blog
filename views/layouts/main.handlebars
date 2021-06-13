@@ -20,7 +20,7 @@
 					<!-- If logged in, show dashboard and logout -->
 					{{#if logged_in}}
 						<li><a href="/dashboard">Dashboard</a></li>
-						<li><a href="/logout">Logout</a></li>
+						<li><a href="/logout" id="logout">Logout</a></li>
 					{{else}}
 						<!-- Else, show login -->
 						<li><a href="/login">Login</a></li>
@@ -30,7 +30,12 @@
 			</div>
 		</header>
 		<main class="main-container">
-			{{{body}}}
+			{{#if logged_in}}
+			{{ homepage }}
+			{{/if}}
+			
+			{{{ body }}}
+
 		</main>
 		<footer>
 

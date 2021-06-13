@@ -1,14 +1,37 @@
 {{!-- This is where users can see their dashboard of a list of their posts, and add a new post --}}
-{{#if loggedIn}}
-
 <section class="user-dashboard">
     {{#each posts as |post|}}
     {{> posts post}}
     {{/each}}
-    <div class="create-post-btn">
+    <div id="create-post-btn">
         <button type="submit" class="new-post-btn btn"><i class="fas fa-plus"></i> CREATE NEW POST</button>
     </div>
 </section>
 
+<section id="create-post-card" class="add-post hide">
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title">Create New Post</div>
+		</div>
+		<div class="card-body">
+			<form id="new-post-form">
+				<label for="new-post-title" class="form-label">TITLE</label>
+				<textarea
+					rows="2"
+					placeholder="Add your post title here."
+					aria-setsize="fixed"
+				></textarea>
+				<label for="new-post-content" class="form-label">POST CONTENT</label>
+				<textarea
+					rows="10"
+					placeholder="Add your post content here."
+					aria-setsize="fixed"
+				></textarea>
+			</form>
+			<button type="submit" class="new-post-btn btn"><i class="fas fa-plus"></i>
+				ADD POST</button>
+		</div>
+	</div>
+</section>
 
-{{/if}}
+<script src="js/addPost.js"></script>
