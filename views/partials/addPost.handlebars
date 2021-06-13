@@ -1,1 +1,26 @@
-{{!-- partials for adding new post --}}
+{{! partials for adding new post }}
+<section class="add-post">
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title">Create New Post</div>
+		</div>
+		<div class="card-body">
+			<form>
+				<label for="new-post-title" class="form-label">TITLE</label>
+				<textarea
+					rows="2"
+					placeholder="Add your post title here."
+					aria-setsize="fixed"
+				></textarea>
+				<label for="new-post-comment" class="form-label">POST CONTENT</label>
+				<textarea
+					rows="10"
+					placeholder="Add your post content here."
+					aria-setsize="fixed"
+				></textarea>
+			</form>
+			<button type="submit" class="new-post-btn btn"><i class="fas fa-plus"></i>
+				ADD POST</button>
+		</div>
+	</div>
+</section>

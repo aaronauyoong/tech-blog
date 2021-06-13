@@ -17,13 +17,13 @@
 		<div class="card">
 			<div class="card-header">
 				<h3>
-					<a class="card-title" href="/blog/{{post.id}}">{{post.title}}</a>
+					<a class="card-title" href="/post/{{post.id}}">{{Post.post.title}}</a>
 				</h3>
-				<p>Posted by {{user.username}} on {{format_date date_created}}</p>
+				<p>Posted by {{User.username}} on {{format_date Post.date_created}}</p>
 			</div>
 
 			<p class="card-body">
-				{{post.content}}
+				{{Post.post_content}}
 			</p>
 		</div>
 	</div>

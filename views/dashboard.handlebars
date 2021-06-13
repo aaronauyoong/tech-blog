@@ -1,4 +1,11 @@
 {{!-- This is where users can see their dashboard of a list of their posts, and add a new post --}}
-{{#each posts as |post|}}
-{{> post}}
-{{/each}}
+{{#if loggedIn}}
+
+<section class="user-dashboard">
+    {{#each posts as |post|}}
+    {{> post}}
+    {{/each}}
+</section>
+
+
+{{/if}}

@@ -1,3 +1,9 @@
-{{!-- partials for comments --}}
+{{! partials for comments }}
 <section class="comments">
+	<div class="comments-card">
+		<p> {{Comment.comment.content}} </p>
+	</div>
+	<div class="comment-user">
+		<p> {{User.username}}, {{format_date Comment.date_created}}</p>
+	</div>
 </section>

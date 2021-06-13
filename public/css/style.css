@@ -1,6 +1,7 @@
 :root {
 	/* insert colours here */
 	--solidbrown: rgb(36, 9, 9);
+	--gentlebrown: rgb(117, 103, 103);
 	--lightgreen: rgb(178, 194, 178);
 	--grey: #6f6866;
 }
@@ -42,6 +43,20 @@ a :visited {
 
 header {
 	background-color: var(--solidbrown);
+}
+
+textarea {
+	padding: 10px;
+	resize: none;
+	width: 100%;
+}
+
+textarea:placeholder-shown {
+	font-style: italic;
+}
+
+label {
+	font-weight: 900;
 }
 
 .top-container {
@@ -140,7 +155,6 @@ header {
 	justify-content: center;
 }
 
-
 .meta {
 	font-size: 14px;
 }
@@ -165,3 +179,51 @@ header {
     transform: translate(-1px, -1px);
 }
 
+.login, .signup, .posts, .comments, .create-post, .create-comment {
+	margin-top: 10px;
+}
+
+.comments {
+	border-top: 0.1px solid var(--solidbrown);
+	padding: 20px;
+	background-color: aliceblue;
+	color: black;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.comment-user {
+	text-align: right;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.comment-btn {
+	border-radius: 10px;
+	text-align: right;
+	justify-content: flex-end;
+}
+
+.comment-btn:hover{
+	transition: 0.5s;
+	background-color: var(--solidbrown);
+	color: var(--lightgreen)
+}
+
+.new-post {
+	text-align: center;
+
+}
+
+.new-comment {
+	text-align: center;
+}
+
+.new-post-btn, .new-comment-btn {
+	border-radius: 10px;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	background-color: var(--gentlebrown);
+	color: white;
+}

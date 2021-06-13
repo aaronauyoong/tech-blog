@@ -1,3 +1,12 @@
-{{!-- This is where users can see expanded posts and click on add comment button --}}
-<section class="post">
+{{! This is where users can see expanded posts and click on add comment button }}
+<section class="posts">
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title"><h3><a href="/post/{{Post.post.id}}"> {{Post.post.title}}</a></h3></div>
+			<div class="card-datetime"><p>Posted by:{{User.username}} at {{format_date Post.date_created}}</p></div>
+		</div>
+		<div class="card-body">
+			<p>{{Post.post_content}}</p>
+		</div>
+	</div>
 </section>
