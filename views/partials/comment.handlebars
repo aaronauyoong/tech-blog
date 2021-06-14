@@ -6,9 +6,9 @@
 	<div class="comment-user">
 		<p>{{user.username}}, {{date_created}}</p>
 	</div>
-	{{#if is_owner}}
+	{{!-- {{#if is_owner}} --}}
 	<div class="delete-comment">
-		<p><i class="fas fa-minus-square"></i></p>
+		<button id="delete-comment-btn" type="submit"><i class="fas fa-minus-square"></i></button>
 	</div>
-	{{/if}}
+	{{!-- {{/if}} --}}
 </section>

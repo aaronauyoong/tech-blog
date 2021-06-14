@@ -230,11 +230,19 @@ label {
 }
 
 .delete-comment {
+	display: flex;
+	background-color: transparent;
+	border: none;
 	text-align: left;
 	cursor: pointer;
 }
 
-.delete-comment:hover {
+#delete-comment-btn {
+	background-color: transparent;
+	border: none;
+}
+
+#delete-comment-btn i:hover {
 	color: var(--strikingred);
 }
 

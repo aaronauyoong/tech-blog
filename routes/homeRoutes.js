@@ -60,6 +60,29 @@ router.get("/posts/:id", async (req, res) => {
 	}
 });
 
+// Get specific comments by id
+router.get("/comments/:id", async (req, res) => {
+	try {
+		const commentData = await Comment.findByPk(req.params.id, {
+			include: [
+				{
+					model: User,
+					attributes: ["username"],
+				},
+			],
+		});
+		const comment = commentData.get({ plain: true });
+		const isOwner = post.user_id == req.session.user_id;
+		res.render("postExpanded", {
+			...comment,
+			is_owner: isOwner,
+			logged_in: req.session.logged_in,
+		});
+	} catch (err) {
+		res.status(500).json(err);
+	}
+});
+
 // Open up dashboard with list of user's own posts
 router.get("/dashboard", withAuth, async (req, res) => {
 	try {
