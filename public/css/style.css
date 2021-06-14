@@ -126,6 +126,7 @@ label {
 	color: var(--lightgreen);
 	font-weight: 900;
 	font-size: 28px;
+	margin: 20px;
 }
 
 .card-datetime {
