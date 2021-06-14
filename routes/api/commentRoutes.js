@@ -1,11 +1,17 @@
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
-const { Comment } = require("../../models");
+const { Comment, User, Post } = require("../../models");
 
 // get all comments
 router.get("/", (req, res) => {
 	Comment.findAll({
 		attributes: ["id", "comment_content", "user_id", "post_id", "date_created"],
+		include: [
+			{
+				model: User,
+				attributes: ["username"]
+			}
+		],
 		order: [["date_created", "DESC"]],
 	})
 		.then((commentData) => res.json(commentData))
@@ -44,7 +50,6 @@ router.delete("/delete", withAuth, (req, res) => {
 				res.status(404).json({ message: "No comment found" });
 				return;
 			}
-
 			res.json(commentData);
 		})
 		.catch((err) => {

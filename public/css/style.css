@@ -192,12 +192,17 @@ label {
 	margin-top: 10px;
 }
 
+.add-comment {
+	margin-bottom: 10px;
+}
+
 .comments {
 	border-top: 0.1px solid var(--solidbrown);
 	border-bottom: 0.1px solid var(--solidbrown);
 	padding: 20px;
 	background-color: aliceblue;
 	color: black;
+	margin-bottom: 10px;
 	/* border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px; */
 }
@@ -205,7 +210,8 @@ label {
 .comment-card {
 	background-color: var(--lightgreen);
     border-radius: 10px;
-	margin: 10px;
+	
+	
 }
 
 .comment-user {

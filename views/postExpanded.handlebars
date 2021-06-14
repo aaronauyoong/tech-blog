@@ -18,10 +18,11 @@
 				<p>{{comment_content}}</p>
 			</div>
 			<div class="comment-user">
-				<p>{{user.username}} {{date_created}}</p>
+				<p>{{comment.user.username}}, {{date_created}}</p>
 			</div>
 		</section>
 		{{/each}}
+		{{#if logged_in}}
 		<section class="add-comment">
 			<div class="comment-card">
 				<div class="card-body">
@@ -41,6 +42,7 @@
 				</div>
 			</div>
 		</section>
+		{{/if}}
 	</div>
 </section>
 

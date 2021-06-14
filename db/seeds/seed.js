@@ -12,6 +12,8 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+  console.log("//-----USERS SEEDED-----//");
+
 
   for (const post of postData) {
     await Post.create({
@@ -19,6 +21,16 @@ const seedDatabase = async () => {
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
+  console.log("//-----POSTS SEEDED-----//");
+
+
+  for (const comment of commentData) {
+    await Comment.create({
+      ...comment,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+  console.log("//-----COMMENTS SEEDED-----//");
 
   process.exit(0);
 };

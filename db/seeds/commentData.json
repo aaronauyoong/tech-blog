@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "comment_content": "Omg yeah we just learnt it in class today! Excited to learn more.",
+        "date_created": "07.06.2021",
+        "user_id": 123,
+        "post_id": 1
+    },
+    {
+        "id": 2,
+        "comment_content": "Yeah! It really helps with understanding full-stack applications and helps organise your directory.",
+        "date_created": "07.06.2021",
+        "user_id": 456,
+        "post_id": 1
+    },
+    {
+        "id": 3,
+        "comment_content": "Yay another test?",
+        "date_created": "07.06.2021",
+        "user_id": 456,
+        "post_id": 2
+    }
+]
