@@ -1,15 +1,18 @@
 // Edit Post Frontend Functions (Update and Delete)
 
 // Post ID
-const postId = window.location.pathname.split("/").pop();
+const postID = window.location.pathname.split("/").pop();
 
 // Update Post frontend
-const editPost = async (event) => {
+const updatePost = async (event) => {
 	event.preventDefault();
-	console.log("The edit button was clicked");
+	console.log("The update button was clicked");
 
-	const title = document.querySelector("#new-post-title").value.trim();
-	const content = document.querySelector("#new-post-content").value.trim();
+	const title = document.querySelector("#update-post-title").value.trim();
+	const content = document.querySelector("#update-post-content").value.trim();
+
+    console.log("YO THIS IS TITLE", title);
+	console.log("YO THIS IS DA CONTENT", content);
 
 	if (title && content) {
 		const response = await fetch(`/api/posts/${postID}`, {
@@ -45,5 +48,5 @@ const deletePost = async (event) => {
 };
 
 // Listeners
-document.querySelector("#edit-post-btn").addEventListener("click", editPost);
+document.querySelector("#update-post-btn").addEventListener("click", updatePost);
 document.querySelector("#delete-post-btn").addEventListener("click", deletePost);
