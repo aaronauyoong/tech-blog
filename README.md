@@ -11,7 +11,6 @@ Deployed on Heroku: [insert link here]
 * [License](#License)
 * [Features](#Features)
 * [Installation](#Installation)
-* [Usage](#Usage)
 * [Contributions](#Contributions)
 * [Credits](#Credits)
 * [Tests](#Tests)
@@ -87,10 +86,6 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 This application has been deployed to Heroku. 
 <br>
 You may access it [here](https://heroku.com/).
- 
-
-## Usage
-
 
 ## Contributions
 For contributions, you may follow the industry standard: [Contributor Covenant](https://www.contributor-covenant.org/).
