@@ -1,8 +1,8 @@
 {{!-- This is where users can see their dashboard of a list of their posts, and add a new post --}}
 <section class="user-dashboard">
-		{{#if post.length}}
+		{{!-- {{#if post.length}}
 			<section class="post-overview-card">
-    			<div class="post-title">Your Posts</div>
+    			<div class="post-title">{{username}}'s Posts</div>
     			<div class="card-body">
         			<ul class="post-list">
             			{{#each post}}
@@ -16,8 +16,8 @@
         			</ul>
     			</div>
 			</section>
-		{{/if}}
-	{{!-- {{#each posts as |post|}}
+		{{/if}} --}}
+	{{#each posts as |post|}}
 		<section class="posts-overview">
 			<div class="post-overview">
 				<div class="post-overview-card">
@@ -32,13 +32,7 @@
 				</div>
 			</div>
 		</section>
-	{{/each}} --}}
-
-	{{!--  --}}
-
-    {{!-- {{#each posts as |post|}}
-    {{> posts post}}
-    {{/each}} --}}
+	{{/each}}
 
 	{{!--  --}}
 	
@@ -56,18 +50,20 @@
 			<form id="new-post-form">
 				<label for="new-post-title" class="form-label">TITLE</label>
 				<textarea
+					id="new-post-title"
 					rows="2"
 					placeholder="Add your post title here."
 					aria-setsize="fixed"
 				></textarea>
 				<label for="new-post-content" class="form-label">POST CONTENT</label>
 				<textarea
+					id="new-post-content"
 					rows="10"
 					placeholder="Add your post content here."
 					aria-setsize="fixed"
 				></textarea>
 			</form>
-			<button type="submit" class="new-post-btn btn"><i class="fas fa-plus"></i>
+			<button id="add-post-btn" type="submit" class="new-post-btn btn"><i class="fas fa-plus"></i>
 				ADD POST</button>
 		</div>
 	</div>

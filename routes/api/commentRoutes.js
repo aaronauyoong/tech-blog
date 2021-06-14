@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 		attributes: ["id", "comment_content", "user_id", "post_id", "date_created"],
 		order: [["date_created", "DESC"]],
 	})
-		.then((dbPostData) => res.json(dbPostData))
+		.then((commentData) => res.json(commentData))
 		.catch((err) => {
 			console.log(err);
 			res.status(500).json(err);
@@ -24,7 +24,7 @@ router.post("/", withAuth, (req, res) => {
 			post_id: req.body.post_id,
 			user_id: req.session.user_id,
 		})
-			.then((dbCommentData) => res.json(dbCommentData))
+			.then((commentData) => res.json(commentData))
 			.catch((err) => {
 				console.log(err);
 				res.status(400).json(err);
@@ -33,19 +33,19 @@ router.post("/", withAuth, (req, res) => {
 });
 
 // delete comment
-router.delete("/:id", withAuth, (req, res) => {
+router.delete("/delete", withAuth, (req, res) => {
 	Comment.destroy({
 		where: {
 			id: req.params.id,
 		},
 	})
-		.then((dbPostData) => {
-			if (!dbPostData) {
-				res.status(404).json({ message: "No post found with this ID." });
+		.then((commentData) => {
+			if (!commentData) {
+				res.status(404).json({ message: "No comment found" });
 				return;
 			}
 
-			res.json(dbPostData);
+			res.json(commentData);
 		})
 		.catch((err) => {
 			console.log(err);

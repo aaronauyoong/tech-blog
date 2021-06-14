@@ -63,18 +63,31 @@ router.get("/:id", (req, res) => {
 });
 
 // create new post
-router.post("/", withAuth, (req, res) => {
-	Post.create({
-		title: req.body.title,
-		content: req.body.content,
-		user_id: req.session.user_id,
-	})
-		.then((dbPostData) => res.json(dbPostData))
-		.catch((err) => {
-			console.log(err);
-			res.status(500).json(err);
-		});
+router.post('/', withAuth, async (req, res) => {
+    try {
+        const newPost = await Post.create({
+            title: req.body.title,
+			post_content: req.body.content,
+            user_id: req.session.user_id,
+        });
+        res.status(200).json(newPost);
+    } catch (err) {
+        res.status(400).json(err);
+    }
 });
+
+// router.post("/", withAuth, (req, res) => {
+// 	Post.create({
+// 		title: req.body.title,
+// 		content: req.body.content,
+// 		user_id: req.session.user_id,
+// 	})
+// 		.then((postData) => res.json(postData))
+// 		.catch((err) => {
+// 			console.log(err);
+// 			res.status(500).json(err);
+// 		});
+// });
 
 // edit exisitng post
 router.put("/:id", withAuth, (req, res) => {

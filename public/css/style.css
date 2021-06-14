@@ -252,6 +252,7 @@ label {
 .post-overview {
 	border: 5px solid var(--stormgrey);
 	border-radius: 10px;
+	margin: 10px;
 }
 .post-overview-card {
 	display: flex;
@@ -267,13 +268,15 @@ label {
 .post-title a {
 	color: var(--purewhite);
 	font-weight: 500;
-	font-size: 24px;
+	font-size: 20px;
+	padding: 10px;
 }
 
 .post-datetime {
 	color: var(--purewhite);
 	font-style: italic;
 	font-size: 12px;
+	padding: 10px;
 }
 
 .post-expanded {

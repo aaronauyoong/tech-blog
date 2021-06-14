@@ -12,11 +12,20 @@ const showForm = async (event) => {
 
 const createNewPost = async (event) => {
 	event.preventDefault();
+	console.log("create new post was clicked");
 
-	const title = document.querySelector("#new-post-title");
-	const content = document.querySelector("#new-post-content");
+	const title = document.querySelector("#new-post-title").value.trim();
+	const content = document.querySelector("#new-post-content").value.trim();
+
+	if (!title || !content) {
+        alert("Please input post title and post content.")
+        return;
+    }
 
 	if (title && content) {
+		console.log("YO THIS IS TITLE", title);
+		console.log("YO THIS IS DA CONTENT", content);
+
 		const response = await fetch("/api/posts", {
 			method: "POST",
 			body: JSON.stringify({ title, content }),
@@ -26,13 +35,17 @@ const createNewPost = async (event) => {
 		});
 
 		if (response.ok) {
-			document.location.replace("/dashboard");
+			createPostCard.classList.add("hide");
+    		addNewPostBtn.classList.remove("hide");
+			window.location.replace("/dashboard");
 		} else {
+			createPostCard.classList.add("hide");
+    		addNewPostBtn.classList.remove("hide");
 			alert("Failed to add a new blog post.");
 		}
 	}
 };
 
 // Listeners
-document.querySelector("#new-post-form").addEventListener("click", createNewPost);
+document.querySelector("#add-post-btn").addEventListener("click", createNewPost);
 addNewPostBtn.addEventListener("click", showForm);
