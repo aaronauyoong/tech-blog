@@ -23,7 +23,7 @@ router.get("/", (req, res) => {
 			},
 		],
 	})
-		.then((dbPostData) => res.json(dbPostData))
+		.then((postData) => res.json(postData))
 		.catch((err) => {
 			console.log(err);
 			res.status(500).json(err);
@@ -48,13 +48,12 @@ router.get("/:id", (req, res) => {
 			},
 		],
 	})
-		.then((dbPostData) => {
-			if (!dbPostData) {
+		.then((postData) => {
+			if (!postData) {
 				res.status(404).json({ message: "No post found with this ID." });
 				return;
 			}
-
-			res.json(dbPostData);
+			res.json(postData);
 		})
 		.catch((err) => {
 			console.log(err);
@@ -76,19 +75,6 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-// router.post("/", withAuth, (req, res) => {
-// 	Post.create({
-// 		title: req.body.title,
-// 		content: req.body.content,
-// 		user_id: req.session.user_id,
-// 	})
-// 		.then((postData) => res.json(postData))
-// 		.catch((err) => {
-// 			console.log(err);
-// 			res.status(500).json(err);
-// 		});
-// });
-
 // edit exisitng post
 router.put("/:id", withAuth, (req, res) => {
 	Post.update(
@@ -102,13 +88,12 @@ router.put("/:id", withAuth, (req, res) => {
 			},
 		}
 	)
-		.then((dbPostData) => {
-			if (!dbPostData) {
+		.then((postData) => {
+			if (!postData) {
 				res.status(404).json({ message: "No post found with this ID." });
 				return;
 			}
-
-			res.json(dbPostData);
+			res.json(postData);
 		})
 		.catch((err) => {
 			console.log(err);
@@ -122,13 +107,12 @@ router.delete("/:id", withAuth, (req, res) => {
 		where: {
 			id: req.params.id,
 		},
-	}).then((dbPostData) => {
-		if (!dbPostData) {
+	}).then((postData) => {
+		if (!postData) {
 			res.status(404).json({ message: "No post found with this ID" });
 			return;
 		}
-
-		res.json(dbPostData);
+		res.json(postData);
 	});
 });
 
