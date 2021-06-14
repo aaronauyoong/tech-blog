@@ -1,3 +1,5 @@
+<img src="./public/images/tech-blog-banner.jpeg" width="100%">
+
 # Tech-Blog
 Project by: Aaron Au Yoong
 
@@ -102,6 +104,8 @@ For contributions, you may follow the industry standard: [Contributor Covenant](
 * [NPM express-handlebars](https://www.npmjs.com/package/express-handlebars)
 * [connect-session-sequelize](https://github.com/mweibel/connect-session-sequelize)
 * [Sequelize](https://sequelize.org/master/index.html).
+
+README banner obtained from freewebheaders - [Technology Background with Electrical Design in Rainbow Colors](https://www.freewebheaders.com/technology-industry/high-tech-designs-headers/).
 
 
 
