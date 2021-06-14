@@ -1,7 +1,38 @@
 {{! This is what the user will see when they click on the title of post (i.e. brings to a page with expanded post) }}
-{{#if isOwner}}
-	{{>editPost}}
-{{else}}
+<a class="return-dashboard" href="/dashboard">&larr; Back to dashboard</a>
+<section id="edit-post-card" class="edit-post">
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title">Edit Post</div>
+		</div>
+		<div class="card-body">
+			<form id="new-post-form">
+				<label for="new-post-title" class="form-label">TITLE</label>
+				<textarea
+					rows="2"
+					placeholder="{{title}}"
+					aria-setsize="fixed"
+				></textarea>
+				<label for="new-post-content" class="form-label">POST CONTENT</label>
+				<textarea
+					rows="10"
+					placeholder="{{post_content}}"
+					aria-setsize="fixed"
+				></textarea>
+			</form>
+			<button id="update-post-btn" type="submit" class="new-post-btn btn">
+				<i class="fas fa-pen"></i>
+				UPDATE POST
+			</button>
+			<button id="delete-post-btn" type="submit" class="new-post-btn btn">
+				<i class="fas fa-trash"></i>
+				DELETE POST</button>
+		</div>
+	</div>
+</section>
+
+{{!--  --}}
+
 <section class="posts">
 	<div class="card">
 		<div class="card-header">
@@ -30,4 +61,3 @@
 		{{/if}}
 	</div>
 </section>
-{{/if}}

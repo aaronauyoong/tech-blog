@@ -15,9 +15,9 @@ const loginFormHandler = async (event) => {
 
 		if (response.ok) {
 			// If successful, redirect the browser to the dashboard page
-			window.location.replace('/dashboard');            
-			// window.location.replace('/');            
-            // window.location.href = '/dashboard';
+			window.location.href = "/dashboard";
+			// window.location.replace('/dashboard');
+			// window.location.replace('/');
 		} else {
 			alert(response.statusText);
 		}
@@ -27,4 +27,3 @@ const loginFormHandler = async (event) => {
 document
 	.querySelector(".login-form")
 	.addEventListener("submit", loginFormHandler);
-

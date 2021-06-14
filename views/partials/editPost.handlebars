@@ -1,5 +1,6 @@
 {{! This is handlebars for editing posts }}
 {{! Only from dashboard, and if they're logged in, can they access this page }}
+<a class="return-dashboard" href="/dashboard">&larr; Back to dashboard</a>
 <section id="edit-post-card" class="edit-post">
 	<div class="card">
 		<div class="card-header">
@@ -20,7 +21,7 @@
 					aria-setsize="fixed"
 				></textarea>
 			</form>
-			<button id="update-post-btn" type="submit" class="new-post-btn btn">
+			<button id="edit-post-btn" type="submit" class="new-post-btn btn">
 				<i class="fas fa-pen"></i>
 				UPDATE POST
 			</button>

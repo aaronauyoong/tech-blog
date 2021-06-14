@@ -37,7 +37,7 @@ const createNewPost = async (event) => {
 		if (response.ok) {
 			createPostCard.classList.add("hide");
     		addNewPostBtn.classList.remove("hide");
-			window.location.replace("/dashboard");
+			window.location.href = "/dashboard";
 		} else {
 			createPostCard.classList.add("hide");
     		addNewPostBtn.classList.remove("hide");
