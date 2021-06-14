@@ -12,6 +12,7 @@
 		<div class="card-body">
 			<p>{{post_content}}</p>
 		</div>
+		{{#each comments as |comment|}}
 		<section class="comments">
 			<div class="comments-card">
 				<p>{{comment_content}}</p>
@@ -20,6 +21,7 @@
 				<p>{{user.username}} {{date_created}}</p>
 			</div>
 		</section>
+		{{/each}}
 		<section class="add-comment">
 			<div class="comment-card">
 				<div class="card-body">
