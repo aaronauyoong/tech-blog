@@ -58,14 +58,7 @@
 			<p>{{post_content}}</p>
 		</div>
 		{{#each comments as |comment|}}
-		<section class="comments">
-			<div class="comments-card">
-				<p>{{comment_content}}</p>
-			</div>
-			<div class="comment-user">
-				<p>{{user.username}}, {{date_created}}</p>
-			</div>
-		</section>
+		{{>comment}}
 		{{/each}}
 		{{#if logged_in}}
 			{{>addComment}}

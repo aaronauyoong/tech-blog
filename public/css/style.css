@@ -7,6 +7,7 @@
 	--stormgrey: rgb(41, 40, 40);
 	--grey: #6f6866;
 	--purewhite: white;
+	--strikingred: red;
 }
 
 body {
@@ -35,8 +36,9 @@ a {
 	color: var(--lightgreen);
 }
 
-a :hover {
+a:hover {
     text-decoration: none;
+	color: var(--brownishpink);
 }
 
 a :visited {
@@ -86,6 +88,10 @@ label {
 	font-weight: 300;
 }
 
+.navigation-bar a:hover{
+	color: var(--purewhite);
+}
+
 .title {
 	padding-left: 60px;
 	padding-right: 60px;
@@ -131,6 +137,10 @@ label {
 	font-weight: 900;
 	font-size: 28px;
 	padding: 10px;
+}
+
+.card-title a:hover {
+	color: var(--purewhite);
 }
 
 .card-datetime {
@@ -211,14 +221,21 @@ label {
 .comment-card {
 	background-color: var(--lightgreen);
     border-radius: 10px;
-	
-	
 }
 
 .comment-user {
 	text-align: right;
 	font-size: 12px;
 	font-style: italic;
+}
+
+.delete-comment {
+	text-align: left;
+	cursor: pointer;
+}
+
+.delete-comment:hover {
+	color: var(--strikingred);
 }
 
 .comment-btn {
