@@ -1,6 +1,7 @@
 # Tech-Blog
 Project by: Aaron Au Yoong
 
+Deployed on Heroku: [insert link here]
 <br>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
@@ -8,6 +9,7 @@ Project by: Aaron Au Yoong
 ## Table of Contents
 * [Description](#Description)
 * [License](#License)
+* [Features](#Features)
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [Contributions](#Contributions)
@@ -28,7 +30,22 @@ I WANT a CMS-style blog site
 SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ```
 
-Below is the acceptance criteria for this application:
+## License
+MIT License
+<br>
+Copyright © 2021-Present Aaron Au Yoong. All rights reserved.
+<br>
+
+## Features
+This is a CMS-style blog site, with basic features such as:
+* Homepage displaying list of existing posts
+* A dynamic navigation bar that changes depending on whether user is logged in or not. 
+* Login and signup capabilities (Signing up requires the user to input an email address, username and password. Credentials are then saved and they are automatically logged into the site).
+* Users can click on any post to view the entirety of the post, including any associated comments.
+* Users are required to be signed up AND logged in, in order to add posts and comments.
+* If they are logged in, users have the ability to update and delete any posts they own. 
+* An auto-logout function (a.k.a. session expiry) will occur if the user is idle for 24 hours.
+
 
 ```
 GIVEN a CMS-style blog site
@@ -66,13 +83,10 @@ WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
 
-## License
-MIT License
-<br>
-Copyright © 2021-Present Aaron Au Yoong. All rights reserved.
-<br>
-
 ## Installation
+This application has been deployed to Heroku. 
+<br>
+You may access it [here](https://heroku.com/).
  
 
 ## Usage
