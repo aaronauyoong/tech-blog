@@ -2,54 +2,32 @@ const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
 	try {
-	  const postData = await Post.findAll({
-		include: [
-		  {
-			model: User,
-			attributes: ["username"],
-		  },
-		],
-	  });
-  
-	  // Serialize data so the template can read it
-	  const posts = postData.map((post) => post.get({ plain: true }));
-  
-	  // Pass serialized data and session flag into template
-	  res.render("homepage", { 
-		posts, 
-		logged_in: req.session.logged_in 
-	  });
+		const postData = await Post.findAll({
+			include: [
+				{
+					model: User,
+					attributes: ["username"],
+				},
+			],
+		});
+
+		// Serialize data so the template can read it
+		const posts = postData.map((post) => post.get({ plain: true }));
+
+		// Pass serialized data and session flag into template
+		res.render("homepage", {
+			posts,
+			logged_in: req.session.logged_in,
+		});
 	} catch (err) {
-	  res.status(500).json(err);
+		res.status(500).json(err);
 	}
 });
 
-// get all posts for homepage dashboard
-// router.get("/", async (req, res) => {
-// 	try {
-// 		const postData = await Post.findAll({
-// 			include: [
-// 				{
-// 					model: User,
-// 					attributes: ["username"],
-// 				},
-// 			],
-// 		});
-// 		const posts = postData.map((post) => post.get({ plain: true }));
-
-// 		res.render("homepage", {
-// 			posts,
-// 			logged_in: req.session.logged_in,
-// 		});
-// 	} catch (err) {
-// 		res.status(500).json(err);
-// 	}
-// });
-
 // Get specific posts by id
-router.get("/post/:id", withAuth, async (req, res) => {
+router.get("/posts/:id", async (req, res) => {
 	try {
 		const postData = await Post.findByPk(req.params.id, {
 			include: [
@@ -59,10 +37,11 @@ router.get("/post/:id", withAuth, async (req, res) => {
 				},
 				{
 					model: Comment,
+					attributes: ["comment_content", "date_created"],
 					include: [
 						{
 							model: User,
-							attributes: ["username"],
+							atributes: ["username"],
 						},
 					],
 				},
@@ -70,10 +49,9 @@ router.get("/post/:id", withAuth, async (req, res) => {
 		});
 
 		const post = postData.get({ plain: true });
-		const isOwner = post.user_id == req.session.user_id;
-		res.render("post", {
+
+		res.render("postExpanded", {
 			...post,
-			is_owner: isOwner,
 			logged_in: req.session.logged_in,
 		});
 	} catch (err) {

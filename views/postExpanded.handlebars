@@ -6,7 +6,7 @@
 				<h3 class="card-title">{{title}}</h3>
 			</div>
 			<div class="card-datetime">
-				<p>{{username date_created}}</p>
+				<p>Posted by {{user.username}} on {{date_created}}</p>
 			</div>
 		</div>
 		<div class="card-body">
@@ -17,7 +17,7 @@
 				<p>{{comment_content}}</p>
 			</div>
 			<div class="comment-user">
-				<p>{{username date_created}}</p>
+				<p>{{user.username}} {{date_created}}</p>
 			</div>
 		</section>
 		<section class="add-comment">
