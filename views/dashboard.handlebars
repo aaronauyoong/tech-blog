@@ -1,24 +1,7 @@
 {{!-- This is where users can see their dashboard of a list of their posts, and add a new post --}}
 <section class="user-dashboard">
-		{{!-- {{#if post.length}}
-			<section class="post-overview-card">
-    			<div class="post-title">{{username}}'s Posts</div>
-    			<div class="card-body">
-        			<ul class="post-list">
-            			{{#each post}}
-            			<a href="/dashboard/edit/{{id}}">
-                			<li class="post-list-item" >
-                    			<div>{{title}}</div>
-                    			<div>{{date_created}}</div>
-                			</li>
-            			</a>
-            			{{/each}}
-        			</ul>
-    			</div>
-			</section>
-		{{/if}} --}}
+		
 	{{>postOverview}}	
-	{{!--  --}}
 	
     <div id="create-post-btn">
         <button type="submit" class="new-post-btn btn"><i class="fas fa-plus"></i> CREATE NEW POST</button>

@@ -49,9 +49,10 @@ router.get("/posts/:id", async (req, res) => {
 		});
 
 		const post = postData.get({ plain: true });
-
+		const isOwner = post.user_id == req.session.user_id;
 		res.render("postExpanded", {
 			...post,
+			is_owner: isOwner,
 			logged_in: req.session.logged_in,
 		});
 	} catch (err) {
