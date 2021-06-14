@@ -126,13 +126,14 @@ label {
 	color: var(--lightgreen);
 	font-weight: 900;
 	font-size: 28px;
-	margin: 20px;
+	padding: 10px;
 }
 
 .card-datetime {
 	color: var(--lightgreen);
 	font-style: italic;
 	font-size: 12px;
+	padding: 5px;
 }
 
 .signup-link, .login-link {
