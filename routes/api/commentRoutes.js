@@ -22,19 +22,16 @@ router.get("/", (req, res) => {
 });
 
 // add new comment
-router.post("/", withAuth, (req, res) => {
-	console.log(req.session);
-	if (req.session.loggedIn) {
-		Comment.create({
-			comment_text: req.body.comment_text,
+router.post("/", withAuth, async (req, res) => {
+	try {
+		const newComment = await Comment.create({
+			comment_content: req.body.comment_content,
 			post_id: req.body.post_id,
 			user_id: req.session.user_id,
 		})
-			.then((commentData) => res.json(commentData))
-			.catch((err) => {
-				console.log(err);
-				res.status(400).json(err);
-			});
+		res.status(200).json(newComment);
+	} catch(err) {
+		res.status(400).json(err);
 	}
 });
 
