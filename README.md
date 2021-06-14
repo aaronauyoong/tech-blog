@@ -88,6 +88,12 @@ For contributions, you may follow the industry standard: [Contributor Covenant](
 * License badges used in this project were retrieved from GitHub user's `lukas-h` license-badge markdown file: [Markdown License badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba).
 
 * Basic NPM Packages were used: [NPM Packages](https://www.npmjs.com/).
+* [Node Express](https://expressjs.com/)
+* [NPM express-session](https://www.npmjs.com/package/express-session)
+* [NPM express-handlebars](https://www.npmjs.com/package/express-handlebars)
+* [connect-session-sequelize](https://github.com/mweibel/connect-session-sequelize)
+* [Sequelize](https://sequelize.org/master/index.html).
+
 
 
 ## Tests
