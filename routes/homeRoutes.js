@@ -72,8 +72,8 @@ router.get("/comments/:id", async (req, res) => {
 			],
 		});
 		const comment = commentData.get({ plain: true });
-		const isOwner = post.user_id == req.session.user_id;
-		res.render("postExpanded", {
+		const isOwner = comment.user_id == req.session.user_id;
+		res.render("comment", {
 			...comment,
 			is_owner: isOwner,
 			logged_in: req.session.logged_in,

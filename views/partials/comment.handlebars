@@ -4,7 +4,7 @@
 		<p>{{comment_content}}</p>
 	</div>
 	<div class="comment-user">
-		<p>{{user.username}}, {{format_date date_created}}</p>
+		<p>By {{user.username}} on {{format_date date_created}}</p>
 	</div>
 	{{#if is_owner}}
 	<div class="delete-comment">
