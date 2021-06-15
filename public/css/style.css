@@ -287,6 +287,8 @@ label {
 	border-radius: 10px;
 	margin: 10px;
 }
+
+
 .post-overview-card {
 	display: flex;
 	background-color: var(--brownishpink);
@@ -296,6 +298,11 @@ label {
     justify-content: space-between;
     align-items: center;
 	border-radius: 5px;
+}
+
+.post-overview-card :hover {
+	cursor: pointer;
+	color: var(--lightgreen);
 }
 
 .post-title a {
