@@ -93,7 +93,6 @@ You may access it [here](https://heroku.com/).
 For contributions, you may follow the industry standard: [Contributor Covenant](https://www.contributor-covenant.org/).
 <br>
 
-
 ## Credits
 
 * License badges used in this project were retrieved from GitHub user's `lukas-h` license-badge markdown file: [Markdown License badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba).
@@ -110,6 +109,8 @@ README banner obtained from freewebheaders - [Technology Background with Electri
 
 
 ## Tests
+1. Iterative testing - each addition of a new function/feature was tested. 
+2. Upon app development completion - End-to-end testing was conducted. 
 
 ## Questions
 Any questions? Feel free to contact me via my GitHub profile: [Aaron Au Yoong's GitHub Profile](https://github.com/aaronauyoong)
